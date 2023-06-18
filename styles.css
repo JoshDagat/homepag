@@ -49,6 +49,27 @@ body {
     margin-bottom: 15px;
 }
 
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.skills__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1rem 0;
+    width: 100%;
+}
+
+.skills__skill-icon {
+    height: 45px;
+    width: 45px;
+    margin: 0.25rem 0;
+}
+
 @media screen and (max-width: 576px) {
 
     .main-info,
