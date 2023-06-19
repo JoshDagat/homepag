@@ -29,6 +29,12 @@ body {
     justify-content: space-between;
 }
 
+.fh-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .fv {
     display: flex;
     flex-direction: column;
@@ -51,7 +57,7 @@ body {
 
 .skills__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .skills__item {
@@ -70,7 +76,15 @@ body {
     margin: 0.25rem 0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 709px) {
+    .contact-info__layout-block {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+@media screen and (max-width: 710px) {
 
     .main-info,
     .contact_info_container {
@@ -78,11 +92,20 @@ body {
     }
 
     .contact_info_container {
+        /* align-items: start; */
+        padding: 0 1rem;
+    }
+    .contact-info__block--center {
+        margin: 0 auto;
+    }
+
+    .contact-info__contacts {
         align-items: center;
     }
 
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
+    .contact-info__item {
+        width: 100%;
+        max-width: 200px;
     }
 
     .experiences {
@@ -161,6 +184,11 @@ body {
 .contact-info__contacts {
     margin-top: 2rem;
     justify-content: start;
+}
+
+.contact-info__layout-block {
+    display: flex;
+    gap: 2rem;
 }
 
 /* Intro and Skills Styles */
