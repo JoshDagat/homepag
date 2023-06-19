@@ -116,6 +116,9 @@ body {
 
 .contact-info__block--center {
     justify-content: center;
+    width: 100%;
+    max-width: 200px;
+    align-items: center;
 }
 
 .contact-info__item {
@@ -123,6 +126,7 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: start;
+    align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -147,11 +151,16 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+}
+
+.contact-info__contacts {
+    margin-top: 2rem;
+    justify-content: start;
 }
 
 /* Intro and Skills Styles */
