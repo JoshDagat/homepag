@@ -29,6 +29,12 @@ body {
     justify-content: space-between;
 }
 
+.fh-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .fv {
     display: flex;
     flex-direction: column;
@@ -49,7 +55,36 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.skills__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1rem 0;
+    width: 100%;
+}
+
+.skills__skill-icon {
+    height: 45px;
+    width: 45px;
+    margin: 0.25rem 0;
+}
+
+@media screen and (min-width: 576px) and (max-width: 709px) {
+    .contact-info__layout-block {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+@media screen and (max-width: 710px) {
 
     .main-info,
     .contact_info_container {
@@ -57,11 +92,20 @@ body {
     }
 
     .contact_info_container {
+        /* align-items: start; */
+        padding: 0 1rem;
+    }
+    .contact-info__block--center {
+        margin: 0 auto;
+    }
+
+    .contact-info__contacts {
         align-items: center;
     }
 
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
+    .contact-info__item {
+        width: 100%;
+        max-width: 200px;
     }
 
     .experiences {
@@ -95,6 +139,9 @@ body {
 
 .contact-info__block--center {
     justify-content: center;
+    width: 100%;
+    max-width: 200px;
+    align-items: center;
 }
 
 .contact-info__item {
@@ -102,6 +149,7 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: start;
+    align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -126,11 +174,21 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+}
+
+.contact-info__contacts {
+    margin-top: 2rem;
+    justify-content: start;
+}
+
+.contact-info__layout-block {
+    display: flex;
+    gap: 2rem;
 }
 
 /* Intro and Skills Styles */
@@ -225,6 +283,12 @@ body {
 
 .additional-info {
     flex: 1 1 40%;
+}
+
+.additional-info__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .additional-info__education {
